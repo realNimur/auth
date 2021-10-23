@@ -8,8 +8,8 @@ const Input = ({caption, name, id, type, cls}) => {
     }
     return (
         <>
-            <label htmlFor={id}>{caption}</label>
-            <input type={type} id={id} name={name} value={value} onClick={e => handleChange(e)} className={cls}/>
+            <label htmlFor={id} style={{marginBottom: '5px', textAlign: 'center'}}>{caption}</label>
+            <input type={type} id={id} name={name} value={value} onChange={e => handleChange(e)} className={`input ${cls}`} autoComplete={"on"}/>
         </>
     );
 };

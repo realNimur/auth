@@ -6,9 +6,9 @@ import './auth.css';
 const Auth = () => {
     return (
         <form className={"auth-form"}>
-            <Input type={"text"} name={"login"} caption={"Login"} cls={"input input_form"} id={"login"}/>
-            <Input type={"password"} name={"password"} caption={"Password"} cls={"input input_form"} id={"password"} />
-            <Button caption={"Login"} type={"button"} cls={"button button_submit"} isDisabled={true}/>
+            <Input type={"text"} name={"login"} caption={"Login"} cls={" input_form"} id={"login"}/>
+            <Input type={"password"} name={"password"} caption={"Password"} cls={" input_form"} id={"password"} />
+            <Button caption={"Login"} type={"button"} cls={"button_submit"} isDisabled={true}/>
         </form>
     );
 };
