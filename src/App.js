@@ -7,7 +7,7 @@ import Auth from "./pages/auth/Auth";
 function App() {
     const {auth} = useSelector(state => state.currentUser);
     return (
-        <Router>
+        <Router basename={"/auth"}>
             {auth ? (
                 <Switch>
                     <Route path="/profile">
