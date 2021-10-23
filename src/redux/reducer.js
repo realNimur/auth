@@ -7,6 +7,7 @@ const initialState = {
         password: '123456',
     },
     currentUser: {
+        auth: false,
         login: null,
     }
 
@@ -17,11 +18,11 @@ const reducer = (state = initialState, {type, payload}) => {
         case AUTH_LOGIN:
             return {
                 ...state,
-                currentUser: {login: payload.login},
+                currentUser: {login: payload.login, auth: true},
             }
         default:
             return state
     }
 }
-const store = createStore(reducer);
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 export default store;

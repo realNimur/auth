@@ -1,10 +1,10 @@
 import React from 'react';
+import {useSelector} from "react-redux";
 
 const Profile = () => {
+    const {login} = useSelector(state => state.currentUser);
     return (
-        <div>
-            Profile
-        </div>
+        <h1>{login}</h1>
     );
 };
 
